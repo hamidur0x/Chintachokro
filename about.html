@@ -1,218 +1,587 @@
 <!doctype html>
 <html lang="bn">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>আমাদের সম্পর্কে — সাহিত্য রস</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bangla:wght@400;700&family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#fcfcfc;
-      --card:#ffffff;
-      --muted:#6b6b6b;
-      --accent:#a33; /* a warm maroon for headings */
-      --glass: rgba(255,255,255,0.6);
-      --container:1200px;
-      --radius:14px;
-      --gap:20px;
-    }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>আমাদের সম্পর্কে — চিন্তাচক্র</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Jomhuria&family=Mina:wght@400;700&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fcfcfc;
+            --card: #ffffff;
+            --muted: #6b6b6b;
+            --accent: #a33;
+            /* a warm maroon for headings */
+            --glass: rgba(255, 255, 255, 0.6);
+            --container: 1200px;
+            --radius: 14px;
+            --gap: 20px;
+        }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background:linear-gradient(180deg,#fff 0%,#fbfbfb 100%);
-      color:#111;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-      padding-bottom:60px;
-    }
+        * {
+            box-sizing: border-box
+        }
 
-    .wrap{max-width:var(--container);margin:32px auto;padding:0 18px}
+        html,
+        body {
+            height: 100%
+        }
 
-    /* top nav */
-    header{
-      position:sticky;top:0;background:rgba(255,255,255,0.9);backdrop-filter:blur(6px);z-index:30;border-bottom:1px solid #eee;
-    }
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--container);margin:0 auto;padding:12px 18px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#c55);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-family:'Noto Serif Bangla';font-size:18px}
-    .brand h1{margin:0;font-family:'Noto Serif Bangla', serif;font-size:18px}
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-    nav a:hover{background:#f4f4f4;color:#111}
+        body {
+            margin: 0;
+            font-family: 'Hind Siliguri', sans-serif;
+            background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
+            color: #111;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
 
-    /* hero */
-    .hero{padding:36px 0 10px}
-    .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
-    .hero h2{font-family:'Noto Serif Bangla', serif;color:var(--accent);margin:6px 0;font-size:34px}
-    .lead{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,20,0.04)}
-    .lead p{margin:0;color:#333;font-size:16px}
+        .wrap {
+            max-width: var(--container);
+            margin: 32px auto;
+            padding: 0 18px
+        }
 
-    aside.contact{background:linear-gradient(180deg,#fff,#fff);padding:18px;border-radius:12px;border:1px solid #f0f0f0}
-    .contact h4{margin:0 0 10px;font-size:16px}
-    .contact p{margin:0 0 8px;color:var(--muted)}
-    .contact a{color:var(--accent);text-decoration:none;font-weight:700}
+        /* top nav */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(6px);
+            z-index: 30;
+            border-bottom: 1px solid #eee;
+        }
 
-    /* goals list */
-    .goals{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .goals li{background:#fff;padding:10px 12px;border-radius:10px;border:1px solid #f3f3f3;color:#333}
+        nav {
+            font-family: 'Mina', sans-serif;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 18px;
+            max-width: 100%;
+            margin: auto;
+        }
 
-    /* activities */
-    .activities{margin-top:26px}
-    .activities ul{padding-left:20px;margin:8px 0}
+        nav img {
+            height: 44px;
+            filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.241));
+        }
 
-    /* team */
-    .team{margin-top:34px}
-    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(12,12,12,0.04);text-align:center}
-    .avatar{width:100px;height:100px;border-radius:50%;background:#eee;margin:0 auto 12px;display:block;object-fit:cover}
-    .card h5{margin:6px 0 2px;font-family:'Noto Serif Bangla', serif}
-    .card small{color:var(--muted)}
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 14px;
+        }
 
-    /* footer */
-    footer{margin-top:48px;padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+        nav ul li a {
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
 
-    /* responsive */
-    @media (max-width:980px){
-      .hero-grid{grid-template-columns:1fr}
-      .team-grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:560px){
-      nav ul{display:none}
-      .team-grid{grid-template-columns:1fr}
-      .brand h1{font-size:16px}
-      .hero h2{font-size:26px}
-      .wrap{padding:0 12px}
-    }
-  </style>
+        nav ul li a:hover {
+            background: #f4f4f4;
+            color: #111;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .brand .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent), #c55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 800;
+            font-family: 'Noto Serif Bangla';
+            font-size: 18px
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-family: 'Noto Serif Bangla', serif;
+            font-size: 18px
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 14px;
+            align-items: center
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-weight: 600
+        }
+
+        nav a:hover {
+            background: #f4f4f4;
+            color: #111
+        }
+
+        .top-image {
+            max-width: var(--container);
+            margin: 20px auto;
+            height: 400px;
+            background-image: url('media/jon-asleeb-PUQSHh70L1Y-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* hero */
+        .hero {
+            padding: 36px 0 10px
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 28px;
+            align-items: start
+        }
+
+        .hero h2 {
+            font-family: 'Noto Serif Bangla', serif;
+            color: var(--accent);
+            margin: 6px 0;
+            font-size: 34px
+        }
+
+        .lead {
+            background: var(--card);
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(20, 20, 20, 0.04)
+        }
+
+        .lead p {
+            margin: 0;
+            color: #333;
+            font-size: 16px
+        }
+
+        aside.contact {
+            background: linear-gradient(180deg, #fff, #fff);
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid #f0f0f0
+        }
+
+        .contact h4 {
+            margin: 0 0 10px;
+            font-size: 16px
+        }
+
+        .contact p {
+            margin: 0 0 8px;
+            color: var(--muted)
+        }
+
+        .contact a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        /* goals list */
+        .goals {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px
+        }
+
+        .goals li {
+            background: #fff;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid #f3f3f3;
+            color: #333
+        }
+
+        /* activities */
+        .activities {
+            margin-top: 26px
+        }
+
+        .activities ul {
+            padding-left: 20px;
+            margin: 8px 0
+        }
+
+        /* team */
+        .team {
+            margin-top: 34px
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .card {
+            background: var(--card);
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(12, 12, 12, 0.04);
+            text-align: center
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: #eee;
+            margin: 0 auto 16px;
+            display: block;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            display: none;
+            overflow: hidden;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            cursor: grab;
+            transition: transform 0.2s ease;
+        }
+
+        .lightbox img:active {
+            cursor: grabbing;
+        }
+
+
+        .card h5 {
+            margin: 6px 0 2px;
+            font-family: 'Noto Serif Bangla', serif
+        }
+
+        .card small {
+            color: var(--muted)
+        }
+
+        /* footer */
+        footer {
+            margin-top: 48px;
+            padding: 18px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            background: #f9f9f9;
+        }
+
+        /* responsive */
+        @media (max-width:980px) {
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width:560px) {
+            nav ul {
+                display: none
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr
+            }
+
+            .brand h1 {
+                font-size: 16px
+            }
+
+            .hero h2 {
+                font-size: 26px
+            }
+
+            .wrap {
+                padding: 0 12px
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 60px;
+                right: 18px;
+                width: 200px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            ul#nav-links {
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100vh;
+                background-color: #f8f9fa;
+                flex-direction: column;
+                padding-top: 60px;
+                gap: 20px;
+                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+                border-radius: 0 8px 8px 0;
+                transition: left 0.3s ease;
+                z-index: 1100;
+                list-style: none;
+                display: flex;
+            }
+
+            ul#nav-links.open {
+                left: 0;
+            }
+
+            ul#nav-links li {
+                width: 100%;
+                padding-left: 20px;
+            }
+
+            ul#nav-links li a {
+                font-size: 18px;
+                color: #333;
+                font-weight: bold;
+                text-decoration: none;
+                display: block;
+            }
+
+            ul#nav-links li a:hover {
+                color: #007bff;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav-inner">
-      <div class="brand">
-        <div class="logo">রস</div>
-        <div>
-          <h1>সাহিত্য রস</h1>
-          <div style="font-size:12px;color:var(--muted);margin-top:2px">স্বতন্ত্র সাহিত্যচর্চার প্ল্যাটফর্ম</div>
-        </div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">হোম</a></li>
-          <li><a href="#">ব্লগ</a></li>
-          <li><a href="#">লেখা পাঠান</a></li>
-          <li><a href="#">ম্যাগাজিন</a></li>
-          <li><a href="#contact">যোগাযোগ</a></li>
-          <li><a href="#about">আমাদের সম্পর্কে</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <nav>
+            <img src="media/logo.png" alt="404">
 
-  <main class="wrap">
-    <section class="hero" id="about">
-      <div class="hero-grid">
-        <div>
-          <h2>আমাদের সম্পর্কে</h2>
-          <div class="lead">
-            <p><strong>সাহিত্য রস</strong> — আমরা বিশ্বাস করি, সাহিত্যের শক্তি আছে মানুষকে বদলে দেওয়ার, সমাজকে জাগিয়ে তোলার এবং সময়কে চিহ্নিত করার। সেই বিশ্বাস থেকেই জন্ম সাহিত্য রস-এর — একটি স্বাধীন ও সৃজনশীল সাহিত্যচর্চার প্ল্যাটফর্ম, যেখানে নতুন ও পুরাতন, বাস্তব ও কল্পনা, প্রতিবাদ ও প্রেম সবকিছু মিলেমিশে তৈরি হয় রসায়নের মতো এক অনন্য সাহিত্যভুবন।</p>
+            <!-- Hamburger icon -->
+            <div class="hamburger" id="hamburger">&#9776;</div>
 
-            <div style="margin-top:18px">
-              <h4 style="margin:0 0 8px;font-size:15px">আমাদের লক্ষ্য</h4>
-              <ul class="goals">
-                <li>সাহিত্যের মাধ্যমে চিন্তার মুক্তি ঘটানো</li>
-                <li>লেখক ও পাঠকের মধ্যে আন্তঃসংযোগ তৈরি করা</li>
-                <li>মাতৃভাষা ও বৈচিত্র্যময় সাহিত্যচর্চার ধারাকে বেগবান করা</li>
-                <li>নতুন প্রজন্মকে সাহিত্যের প্রতি আগ্রহী করে তোলা</li>
-              </ul>
+            <ul id="nav-links">
+                <li><a href="index.html">হোম</a></li>
+                <li><a href="#">ব্লগ</a></li>
+                <li><a href="#">ম্যাগাজিন</a></li>
+                <li><a href="#">লেখা পাঠান</a></li>
+                <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                <li><a href="#">যোগাযোগ</a></li>
+
+            </ul>
+
+            <!-- <div class="search">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+    </div> -->
+        </nav>
+        <div class="top-image"></div>
+    </header>
+
+    <main class="wrap">
+        <section class="hero" id="about">
+            <div class="hero-grid">
+                <div>
+                    <h2>আমাদের সম্পর্কে</h2>
+                    <div class="lead">
+                        <p><strong>চিন্তাচক্র </strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                            beatae recusandae qui tempore dolorum natus consequuntur fugiat amet quis cumque impedit
+                            voluptates ab voluptatibus excepturi aliquam, quas nihil. Optio, numquam placeat aspernatur
+                            dolorum voluptatibus excepturi porro labore possimus animi obcaecati!</p>
+
+                        <div style="margin-top:18px">
+                            <h4 style="margin:0 0 8px;font-size:15px">আমাদের লক্ষ্য</h4>
+                            <ul class="goals">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                        </div>
+
+                        <div class="activities">
+                            <h4 style="margin:12px 0 6px">আমাদের কার্যক্রম</h4>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <aside class="contact" id="contact">
+                    <h4>যোগাযোগ করুন</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <p>ইমেইল: <strong>chintachokro28@gmail.com</strong></a></p>
+                    <p style="margin-top:8px;color:var(--muted)">ফেসবুক: <a
+                            href="https://www.facebook.com/chintachokro28">Chintachokro</a></p>
+                    <p style="margin-top:8px;color:var(--muted)">ইউটিউব:<a
+                            href="https://www.youtube.com/@chintachokro28">Chintachokro</a></p>
+
+                    <div style="margin-top:14px">
+                        <a href="#join"
+                            style="display:inline-block;padding:10px 12px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700">লেখা
+                            পাঠান</a>
+                    </div>
+                </aside>
+            </div>
+            <section style="margin-top:26px">
+                <h3 style="font-family:'Noto Serif Bangla', serif;color:var(--accent);">আমরা কারা</h3>
+                <p style="max-width:86ch;color:var(--muted);margin-top:8px">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Non corrupti adipisci optio harum ea odit, ipsa quia distinctio sequi temporibus?
+                </p>
+            </section>
+
+            <div class="team">
+                <h3 style="font-family:'Noto Serif Bangla', serif;color:var(--accent);margin:24px 0 14px">lorem</h3>
+                <div class="team-grid">
+                    <div class="card">
+                        <img src="/media/হামিদুর.jpeg" alt="404" class="avatar">
+                        <h5>Lorem, ipsum.</h5>
+                        <small>Lorem, ipsum.</small>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="404" class="avatar">
+                        <h5>Lorem, ipsum.</h5>
+                        <small>Lorem, ipsum.</small>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="404" class="avatar">
+                        <h5>Lorem ipsum dolor sit.</h5>
+                        <small>Lorem, ipsum.</small>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="404" class="avatar">
+                        <h5>Lorem, ipsum.</h5>
+                        <small>Lorem, ipsum.</small>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="404" class="avatar">
+                        <h5>Lorem, ipsum.</h5>
+                        <small>Lorem, ipsum.</small>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="404" class="avatar">
+                        <h5>Lorem, ipsum.</h5>
+                        <small>Lorem, ipsum.</small>
+                    </div>
+                </div>
             </div>
 
-            <div class="activities">
-              <h4 style="margin:12px 0 6px">আমাদের কার্যক্রম</h4>
-              <ul>
-                <li>অনলাইন সাহিত্য পত্রিকা প্রকাশ</li>
-                <li>বিভিন্ন সাহিত্য প্রতিযোগিতা ও আয়োজন</li>
-                <li>একক ও যৌথ সাহিত্য সংকলন</li>
-                <li>বিশেষ দিবসভিত্তিক সাহিত্য সংখ্যা (যেমন আন্তর্জাতিক মাতৃভাষা দিবস সংখ্যা)</li>
-                <li>মুক্তচিন্তা ও গবেষণাভিত্তিক লেখার প্ল্যাটফর্ম গঠন</li>
-              </ul>
-            </div>
-
-          </div>
+        </section>
+        <div class="lightbox" id="lightbox">
+            <img src="" alt="Full Image">
         </div>
 
-        <aside class="contact" id="contact">
-          <h4>যোগাযোগ করুন</h4>
-          <p>আমরা আপনার ভাবনা, লেখা ও মতামতকে স্বাগত জানাই। আপনার লেখনি আমাদের পরবর্তী প্রকাশনার অংশ হতে পারে।</p>
-          <p style="margin-top:12px">ওয়েবসাইট: <a href="https://www.sahittorosh.com" target="_blank">www.sahittorosh.com</a></p>
-          <p>ইমেইল: <a href="mailto:[email protected]">[email protected]</a></p>
-          <p>WhatsApp: <strong>+8801973546183</strong></p>
-          <p style="margin-top:8px;color:var(--muted)">সামাজিক: <a href="#">@sahittorosh</a></p>
+        <footer>
+            <h3>সর্বস্বত্ব © চিন্তাচক্র <br>
+                এখানে প্রকাশিত কোন লেখা বিনা অনুমতিতে প্রতিলিপি করা যাবে না।</h3>
+        </footer>
 
-          <div style="margin-top:14px">
-            <a href="#join" style="display:inline-block;padding:10px 12px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700">যুক্ত হোন</a>
-          </div>
-        </aside>
-      </div>
+    </main>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-      <div class="team">
-        <h3 style="font-family:'Noto Serif Bangla', serif;color:var(--accent);margin:24px 0 14px">সম্পাদকমণ্ডলী</h3>
-        <div class="team-grid">
-          <div class="card">
-            <img src="https://via.placeholder.com/150" alt="আখিরুল ইল্লিন" class="avatar">
-            <h5>আখিরুল ইল্লিন</h5>
-            <small>প্রধান সম্পাদক</small>
-          </div>
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+        // Lightbox functionality
+        const avatars = document.querySelectorAll('.avatar');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
 
-          <div class="card">
-            <img src="https://via.placeholder.com/150" alt="তুহিন আফ্রিদি" class="avatar">
-            <h5>তুহিন আফ্রিদি</h5>
-            <small>সহকারী সম্পাদক</small>
-          </div>
+        avatars.forEach(avatar => {
+            avatar.addEventListener('click', () => {
+                lightboxImg.src = avatar.src;
+                lightbox.style.display = 'flex';
+            });
+        });
 
-          <div class="card">
-            <img src="https://via.placeholder.com/150" alt="হালিমা আক্তার মেঘলা" class="avatar">
-            <h5>হালিমা আক্তার মেঘলা (প্রমিলা)</h5>
-            <small>ইনস্টাগ্রাম ব্যবস্থাপক</small>
-          </div>
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
 
-          <div class="card">
-            <img src="https://via.placeholder.com/150" alt="মাহজাবিন শিফা" class="avatar">
-            <h5>মাহজাবিন শিফা</h5>
-            <small>সাহিত্য প্রতিবেদক</small>
-          </div>
-
-          <div class="card">
-            <img src="https://via.placeholder.com/150" alt="আব্দুল হাকিম" class="avatar">
-            <h5>আব্দুল হাকিম</h5>
-            <small>ক্যাপশন ও কনটেন্ট লেখক</small>
-          </div>
-
-          <div class="card">
-            <img src="https://via.placeholder.com/150" alt="মো: ফাহাদ" class="avatar">
-            <h5>মো: ফাহাদ</h5>
-            <small>ইউটিউব ব্যবস্থাপক</small>
-          </div>
-        </div>
-      </div>
-
-      <section style="margin-top:26px">
-        <h3 style="font-family:'Noto Serif Bangla', serif;color:var(--accent);">আমরা কারা</h3>
-        <p style="max-width:86ch;color:var(--muted);margin-top:8px">সাহিত্য রস একটি স্বতন্ত্র সাহিত্যিক প্ল্যাটফর্ম, যেখানে আমরা শব্দকে খুঁজে নেই মননের গভীরে, অনুভূতির শিকড়ে। আমরা একটি তরুণ ও সৃজনশীল দল, যারা বিশ্বাস করি—সাহিত্য কেবল শিল্প নয়, এটি প্রতিবাদ, প্রেম, ইতিহাস ও স্বপ্নের বহিঃপ্রকাশ।</p>
-      </section>
-
-    </section>
-
-    <footer>
-      <div>© ২০২৫ সাহিত্য রস। সর্বস্বত্ব সংরক্ষিত।</div>
-      <div style="margin-top:6px;color:var(--muted)">এই ওয়েবসাইটে প্রকাশিত কোনো লেখা বা ছবি অনুমতি ছাড়া ব্যবহার করা যাবে না।</div>
-    </footer>
-
-  </main>
+    </script>
 </body>
+
 </html>
