@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>যোগাযোগ — চিন্তাচক্র</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Jomhuria&family=Mina:wght@400;700&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #fcfcfc;
+      --card: #ffffff;
+      --muted: #6b6b6b;
+      --accent: #a33;
+      --glass: rgba(255, 255, 255, 0.6);
+      --container: 1200px;
+      --radius: 14px;
+      --gap: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
+      background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
+      color: #111;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    .wrap {
+      max-width: var(--container);
+      margin: 32px auto;
+      padding: 0 18px;
+    }
+
+    /* top nav */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(6px);
+      z-index: 30;
+      border-bottom: 1px solid #eee;
+    }
+
+    nav {
+      font-family: 'Mina', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      max-width: 100%;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #eee;
+    }
+
+    nav img {
+      height: 44px;
+      filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.241));
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      background: #f4f4f4;
+      color: #111;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Contact section */
+    .contact {
+      max-width: 600px;
+      margin: 40px auto;
+      background: var(--card);
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid #f0f0f0;
+      box-shadow: 0 6px 18px rgba(20, 20, 20, 0.04);
+    }
+
+    .contact h4 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      font-family: 'Noto Serif Bangla', serif;
+      color: var(--accent);
+    }
+
+    .contact p {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .contact ul {
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .contact ul li {
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-send-writing {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--accent);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .btn-send-writing span {
+      color: var(--bg);
+    }
+
+    .btn-send-writing:hover {
+      background: #7d2424;
+    }
+
+    /* footer */
+    footer {
+      margin-top: 48px;
+      padding: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      background: #f9f9f9;
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: fixed;
+        top: 60px;
+        right: 18px;
+        width: 220px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1100;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="media/logo.png" alt="টিম চিন্তাচক্র লোগো" />
+
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <ul id="nav-links">
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="#">ব্লগ</a></li>
+        <li><a href="#">ম্যাগাজিন</a></li>
+        <li><a href="FORM.HTML">লেখা পাঠান</a></li>
+        <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+        <li><a href="contact.html">যোগাযোগ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="contact" id="contact">
+      <h4>যোগাযোগ করুন</h4>
+      <p>
+        টিম চিন্তাচক্র আপনার বার্তার অপেক্ষায় রয়েছে। আপনি আমাদের সাথে যোগাযোগ করতে পারেন নিম্নলিখিত কারণে:
+      </p>
+      <ul>
+        <li>যে কারণে বার্তা পাঠাতে পারবেন।</li>
+        <li>টিম চিন্তাচক্রে কাজ করতে আগ্রহী হলে।</li>
+        <li>আপনার লেখা প্রকাশের জন্য পাঠাতে চাইলে।</li>
+        <li>কোনো ভুল বা ত্রুটি সম্পর্কে পরামর্শ দিতে চাইলে।</li>
+      </ul>
+
+      <p>ইমেইল: <strong>chintachokro28@gmail.com</strong></p>
+
+      <p><b>এ ছাড়াও আমাদের সাথে যুক্ত হতে পারেন</b></p>
+      <p>ইউটিউব:
+        <a href="https://www.youtube.com/@chintachokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
+      </p>
+      <p>ফেসবুক পেইজ:
+        <a href="https://www.facebook.com/chintachokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
+      </p>
+      <p>ফেসবুক গ্রুপ:
+        <a href="https://www.facebook.com/groups/chintachokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
+      </p>
+      <p>ইনস্টাগ্রাম প্রোফাইল:
+        <a href="https://www.instagram.com/chintachokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
+      </p>
+      <p>টিকটক একাউন্ট:
+        <a href="https://www.tiktok.com/@chintachokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
+      </p>
+
+      <div style="margin-top: 20px;">
+        <a href="FORM.HTML" class="btn-send-writing"><span>লেখা পাঠান</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>সর্বস্বত্ব © চিন্তাচক্র <br />এখানে প্রকাশিত কোন লেখা বিনা অনুমতিতে প্রতিলিপি করা যাবে না।</h3>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>
