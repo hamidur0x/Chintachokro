@@ -199,65 +199,27 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background: white;
-                position: absolute;
-                top: 60px;
-                right: 18px;
-                width: 200px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-                border-radius: 8px;
-                padding: 10px;
-            }
+           nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: fixed;
+        top: 60px;
+        right: 18px;
+        width: 220px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1100;
+      }
 
-            nav ul.show {
-                display: flex;
-            }
+      nav ul.open {
+        display: flex;
+      }
 
-            .hamburger {
-                display: block;
-            }
-
-            ul#nav-links {
-                position: fixed;
-                top: 0;
-                left: -250px;
-                width: 250px;
-                height: 100vh;
-                background-color: #f8f9fa;
-                flex-direction: column;
-                padding-top: 60px;
-                gap: 20px;
-                box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-                border-radius: 0 8px 8px 0;
-                transition: left 0.3s ease;
-                z-index: 1100;
-                list-style: none;
-                display: flex;
-            }
-
-            ul#nav-links.open {
-                left: 0;
-            }
-
-            ul#nav-links li {
-                width: 100%;
-                padding-left: 20px;
-            }
-
-            ul#nav-links li a {
-                font-size: 18px;
-                color: #333;
-                font-weight: bold;
-                text-decoration: none;
-                display: block;
-            }
-
-            ul#nav-links li a:hover {
-                color: #007bff;
-            }
+      .hamburger {
+        display: block;
+      }
         }
     </style>
 </head>
