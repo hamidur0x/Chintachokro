@@ -5,11 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>যোগাযোগ — চিন্তাচক্র</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Jomhuria&family=Mina:wght@400;700&family=Oswald:wght@200..700&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Jomhuria&family=Mina:wght@400;700&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
   <style>
     :root {
       --bg: #fcfcfc;
@@ -17,18 +17,21 @@
       --muted: #6b6b6b;
       --accent: #a33;
       --glass: rgba(255, 255, 255, 0.6);
-      --container: 1200px;
+      --container: 80%;
       --radius: 14px;
       --gap: 20px;
     }
 
     * {
-      box-sizing: border-box;
+      box-sizing: border-box
     }
 
     html,
     body {
-      height: 100%;
+      height: 100%
+    }
+
+    body {
       margin: 0;
       font-family: 'Hind Siliguri', sans-serif;
       background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
@@ -102,17 +105,8 @@
     }
 
     /* Contact section */
-    .contact {
-      max-width: 600px;
-      margin: 40px auto;
-      background: var(--card);
-      padding: 30px;
-      border-radius: var(--radius);
-      border: 1px solid #f0f0f0;
-      box-shadow: 0 6px 18px rgba(20, 20, 20, 0.04);
-    }
 
-    .contact h4 {
+    .wrap h1 {
       margin-top: 0;
       margin-bottom: 20px;
       font-size: 1.8rem;
@@ -120,49 +114,32 @@
       color: var(--accent);
     }
 
-    .contact p {
+    .wrap p {
       margin-bottom: 16px;
       color: var(--muted);
       font-size: 16px;
     }
 
-    .contact ul {
+    .wrap ul {
       padding-left: 20px;
       margin-top: 0;
       margin-bottom: 20px;
       color: var(--muted);
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    .contact ul li {
+    .wrap ul li {
       margin-bottom: 8px;
     }
 
-    .contact a {
+    .wrap a {
       color: var(--accent);
       text-decoration: none;
       font-weight: 600;
     }
 
-    .contact a:hover {
+    .wrap a:hover {
       text-decoration: underline;
-    }
-
-    .btn-send-writing {
-      display: inline-block;
-      padding: 12px 24px;
-      background: var(--accent);
-      border-radius: var(--radius);
-      text-decoration: none;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-    }
-    .btn-send-writing span {
-      color: var(--bg);
-    }
-
-    .btn-send-writing:hover {
-      background: #7d2424;
     }
 
     /* footer */
@@ -213,8 +190,8 @@
       <ul id="nav-links">
         <li><a href="index.html">হোম</a></li>
         <li><a href="#">ব্লগ</a></li>
-        <li><a href="#">ম্যাগাজিন</a></li>
-        <li><a href="FORM.HTML">লেখা পাঠান</a></li>
+        <li><a href="magizine.html">ম্যাগাজিন</a></li>
+        <li><a href="form.html">লেখা পাঠান</a></li>
         <li><a href="about.html">আমাদের সম্পর্কে</a></li>
         <li><a href="contact.html">যোগাযোগ</a></li>
       </ul>
@@ -222,8 +199,8 @@
   </header>
 
   <main class="wrap">
-    <section class="contact" id="contact">
-      <h4>যোগাযোগ করুন</h4>
+    <section id="contact">
+      <h1>যোগাযোগ করুন</h1>
       <p>
         টিম চিন্তাচক্র আপনার বার্তার অপেক্ষায় রয়েছে। আপনি আমাদের সাথে যোগাযোগ করতে পারেন নিম্নলিখিত কারণে:
       </p>
@@ -244,7 +221,8 @@
         <a href="https://www.facebook.com/chintachokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
       </p>
       <p>ফেসবুক গ্রুপ:
-        <a href="https://www.facebook.com/groups/chintachokro28/" target="_blank" rel="noopener noreferrer">Chintachokro</a>
+        <a href="https://www.facebook.com/groups/chintachokro28/" target="_blank"
+          rel="noopener noreferrer">Chintachokro</a>
       </p>
       <p>ইনস্টাগ্রাম প্রোফাইল:
         <a href="https://www.instagram.com/chintacokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
@@ -253,9 +231,7 @@
         <a href="https://www.tiktok.com/@chintachokro28" target="_blank" rel="noopener noreferrer">Chintachokro</a>
       </p>
 
-      <div style="margin-top: 20px;">
-        <a href="FORM.HTML" class="btn-send-writing"><span>লেখা পাঠান</span></a>
-      </div>
+
     </section>
   </main>
 
